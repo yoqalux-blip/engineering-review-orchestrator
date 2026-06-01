@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Review Orchestrator"
+  short_description: "Evidence-based engineering review routing"
+  default_prompt: "Use this skill to orchestrate an evidence-backed engineering review with clear roles, gates, and validation."
