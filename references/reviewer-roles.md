@@ -88,6 +88,7 @@ In Codex workflows, Codex usually acts as final integrator unless the user expli
 
 ## Routing Heuristics
 
+- Before assigning work to a local GPU model, ask whether any other current project needs the GPU. If yes, skip the local model and choose a non-GPU route.
 - Send repetitive queue-shaped work to a bulk screener.
 - Send rare/high-risk/uncertain work to a specialist reviewer.
 - Send process, prompt, schema, and cross-file review to a method reviewer.
