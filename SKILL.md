@@ -35,6 +35,7 @@ Never let an interpretation bypass evidence. Model consensus is not a decision. 
 3. **Route reviewers**
    - Deterministic tools first: tests, linters, type checks, schema checks, diff checks, reconciliation scripts, benchmarks.
    - Fast/local model or rule-based reviewer for broad repetitive screening.
+   - Before using a local GPU model, ask whether any other current project needs the GPU; if yes, skip the local model and route to CPU/deterministic checks, remote APIs, coding-agent review, or manual/Codex review.
    - Strong external model for high-risk, uncertain, or disagreement cases.
    - Coding-agent model for cross-file engineering review, method critique, prompt/rule design, and long-context synthesis.
    - Codex or the human owner makes the final decision after validating evidence.
@@ -62,7 +63,7 @@ Use named roles instead of vague "ask another model" language:
 - **Method Reviewer**: critiques the review process, prompts, sampling, gates, and measurement design.
 - **Final Integrator**: accepts/rejects findings and makes local changes after source evidence is verified.
 
-In this workspace, map these roles to available tools/models conservatively. For example, local models handle bulk triage, external APIs handle high-risk row review, coding agents handle engineering/method review, and Codex integrates verified changes.
+In this workspace, map these roles to available tools/models conservatively. For example, local models handle bulk triage only when local GPU availability has been confirmed, external APIs handle high-risk row review, coding agents handle engineering/method review, and Codex integrates verified changes.
 
 ## Method Stack
 
